@@ -1,0 +1,11 @@
+
+fastapi
+uvicorn[standard]
+jinja2
+pydantic_settings
+pandas
+
+
+python-multipart
+sqlalchemy
+aiosqlite
