@@ -1,12 +1,19 @@
+
+#fastapi imports
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
 from fastapi import Form
+from fastapi.staticfiles import StaticFiles
+
+# project imports
 from models.db import Text, init_db, sessionLocal
 from model_development.model import classifier
+
 
 template = Jinja2Templates(directory="templates")
 
 app = FastAPI()
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 init_db()
 
