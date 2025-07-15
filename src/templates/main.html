@@ -15,9 +15,6 @@
             <br>
             <input type="submit" value="Classify">
         </form>
-        {% if message %}
-            <div class="result">{{ message }}</div>
-        {% endif %}
         {% if label and score %}
             <div class="result">
                 <strong>Label:</strong> {{ label }}<br>
